@@ -27,8 +27,7 @@ Source code for the firmware was created using Arduino IDE.
 
 **WARNING** - the next step will remove the original firmware from your QCX. I don't see why you shouldn't be able to flash it back, but I conducted all of my tests on a spare ATmega328P.
 
-3.
-Choose Arduino Mini board and the programmer you have - I used USBASP and ISP connector to the left of LCD. Press CTRL-U and hopefully you should see welcome message on LCD.
+3. Choose Arduino Mini board and the programmer you have - I used USBASP and ISP connector to the left of LCD. Press CTRL-U and hopefully you should see welcome message on LCD.
 
 ### Usage and wiring
 
