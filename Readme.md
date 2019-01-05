@@ -14,7 +14,7 @@ QCX is an affordable, low power amateur radio transceiver kit designed and sold 
 
 QCX is a CW transceiver by design, but looking at the schematic, it's capable of transmitting many other digital (CW *is* digital!) modes involving frequency keying with no amplitude modulation. That's a **yes** for FT8, JT65, RTTY, Hell, but a **no** for PSK or SSTV. This project brings FT8 (and possibly other modes too - to be tested) support to QCX.
 
-Code presented here consists of two parts: transceiver firmware and PC software. FT8 message encoding/decoding algorithms are quite complex (well, and all in Fortran), that's why I found it easier to let the "official" [WSJTX](4) application take care of that, and only capture the output audio frequency and drive the transmitter accordingly.
+Code presented here consists of two parts: transceiver firmware and PC software. FT8 message encoding/decoding algorithms are quite complex (well, and all in Fortran), that's why I found it easier to let the "official" [WSJTX](4) application do the hard work, and only capture the output audio frequency and drive the transmitter accordingly.
 
 ## Transceiver firmware
 
