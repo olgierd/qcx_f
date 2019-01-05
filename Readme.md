@@ -57,6 +57,9 @@ In order to run:
 * Run WSJTX and start transmitting, you should see some console output.
 * In order to actually drive the QCX's transmitter, run `udpclient.py`. Modify the source, according to the serial port you use (`/dev/ttyUSB0` by default).
 
+## PC Software - Windows
+
+TODO
 
 [1]: https://qrp-labs.com/qcx.html
 [2]: https://en.wikipedia.org/wiki/High_frequency
