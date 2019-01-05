@@ -1,4 +1,4 @@
-# FT8 TX firmware/software for QRP Labs QCX Transceiver
+# FT8 for QCX Transceiver
 
 ## Introduction
 
