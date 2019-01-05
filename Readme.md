@@ -37,7 +37,7 @@ Use the encoder for tuning. Connect TTL serial port to the GPS connector in the 
 ### Features
 
 * LCD works
-* Upper sideband reception with encoder tuning (100 Hz step)
+* Upper sideband (USB) reception with encoder tuning (100 Hz step)
 * Software serial
 
 ### Serial protocol instructions
