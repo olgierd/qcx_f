@@ -55,11 +55,15 @@ In order to run:
 * `./qcx_f`
 * Run `pavucontrol`, in Recording tab, set QCX_F input to _Monitor of (your sound output)_
 * Run WSJTX and start transmitting, you should see some console output.
-* In order to actually drive the QCX's transmitter, run `udpclient.py`. Modify the source, according to the serial port you use (`/dev/ttyUSB0` by default).
+* In order to actually drive the QCX's transmitter, run `udpclient.py`. Modify the source code, set the serial port to point to your device (`/dev/ttyUSB0` by default).
 
 ## PC Software - Windows
 
 TODO
+
+## Disclaimer
+
+This is an experimental, unofficial piece of software with no support other than authors' best effort, whatever you do with it is at your own risk. No QCXes were destroyed or damaged during development. Perform tests using dummy load. Transmitting RF in amateur bands requires an appropriate licence.
 
 [1]: https://qrp-labs.com/qcx.html
 [2]: https://en.wikipedia.org/wiki/High_frequency
