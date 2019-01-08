@@ -12,7 +12,7 @@ RATE = 44100
 SERIAL_BAUDRATE = 115200
 
 p = pyaudio.PyAudio() # init audio object
-ser = serial.Serial('/dev/ttyUSB0', 115200) # open serial port
+ser = serial.Serial('/dev/ttyS0', 115200) # open serial port
 
 # open audio stream
 stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, output=True, frames_per_buffer=chunk)
@@ -44,7 +44,7 @@ while True:
                     delay = 5                            # wait for 5 more crossings
                 if delay == 1:                           # and print new current frequency..
                     print cnt, "---", (lastfreq+freq)/2  # .. as average from last 2 crossings
-                    ser.write("A" + int( 10*(lastfreq+freq)/2) + "X")
+                    ser.write("A" + str(int( 10*(lastfreq+freq)/2)) + "X")
                     cnt = cnt+1                          # increment symbol counter
                 if delay > 0:                            # waiting
                     delay = delay -1
