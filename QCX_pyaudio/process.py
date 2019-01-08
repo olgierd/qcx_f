@@ -4,6 +4,7 @@
 import pyaudio, numpy
 import matplotlib.pyplot as plt
 
+# 1024 samples at a time, signed 16-bit int, 1 channel, 44100 Hz
 chunk = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -11,6 +12,7 @@ RATE = 44100
 
 p = pyaudio.PyAudio()
 
+# open audio stream
 stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, output=True, frames_per_buffer=chunk)
 
 lastc = -1
