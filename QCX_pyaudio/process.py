@@ -15,11 +15,11 @@ p = pyaudio.PyAudio()
 # open audio stream
 stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, output=True, frames_per_buffer=chunk)
 
-lastc = -1
-lastfreq=0
-delay = 5
-cnt = 0         # counting symbols
-zerocount = 0 # for counting zeros
+lastc = -1      # last crossing position
+lastfreq=0      # lasf frequency
+delay = 5       # initial delay (in crossings) before first measure
+cnt = 0         # symbols count
+zerocount = 0   # for counting zeros
 
 while True:
     data = stream.read(chunk)   # read data and convert to signed 16b int
