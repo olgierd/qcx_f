@@ -1,5 +1,7 @@
 ﻿# FT8 for QCX Transceiver
 
+![QCX picture](https://raw.githubusercontent.com/olgierd/qcx_f/master/picture.jpg)
+
 ## Introduction
 
 ### What is QCX?
