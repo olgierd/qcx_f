@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# de SQ3SWF 2019
 
 import pyaudio, numpy
-import matplotlib.pyplot as plt
 
 # 1024 samples at a time, signed 16-bit int, 1 channel, 44100 Hz
 chunk = 1024
