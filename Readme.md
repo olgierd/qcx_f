@@ -57,6 +57,14 @@ In order to run:
 * Run WSJTX and start transmitting, you should see some console output.
 * In order to actually drive the QCX's transmitter, run `udpclient.py`. Modify the source code, set the serial port to point to your device (`/dev/ttyUSB0` by default).
 
+## PC software - Python
+
+Python version has been created as well.
+
+Few additional libraries are required to run it. On Ubuntu/Debian, run `apt-get install python-pyaudio python-numpy python-serial` to install them.
+
+
+
 ## PC Software - Windows
 
 TODO
