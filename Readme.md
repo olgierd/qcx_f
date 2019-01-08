@@ -100,12 +100,12 @@ The __Start__ button starts audio processing and the _Stop_ button stops audio p
 At this description, there will be used following wilcards:
 
 * __%MinGW%__ - Directory, where MinGW is installed (for example &quot;C:\Qt\Qt5.6\5.6\mingw49_32\&quot;).
-* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX_____QT.exe&quot;).
+* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX\_QT.exe&quot;).
 
-To compile QCX_____QT for Windows, you have to do following:
+To compile QCX\_QT for Windows, you have to do following:
 
 1. Install Qt Creator with Qt library and MinGW compiler.
-2. Open QCX_____QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
+2. Open QCX\_QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
 3. Build project as release.
 4. Run following command: `%MinGW%\bin\windeployqt.exe --release %Binary%`.
 5. Copy following files from %MinGW%\\bin\\ to %Binary%: libgcc_s_dw2-1.dll, libstdc*6.dll, libwinpthread-1.dll.
@@ -116,18 +116,18 @@ To compile QCX_____QT for Windows, you have to do following:
 At this description, there will be used following wilcards:
 
 * __%Linuxdeployqt%__ - Directory, where Linuxdeployqt tool is placed.
-* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX_____QT&quot; executable file).
+* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX\_QT&quot; executable file).
 
-To compile QCX_____QT for Linux equipped with apt-get tool, you have to do following:
+To compile QCX\_QT for Linux equipped with apt-get tool, you have to do following:
 
 1. Upgrade installed packet using following: `sudo apt-get update and sudo apt-get upgrade`.
 2. Install Qt library and Qt Creator using: `sudo apt-get install build-essential qtcreator qt5-default`.
 3. Install multimedia extension for Qt using: `sudo apt-get install libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5`.
 4. install serial port extension for Qt using: `sudo apt-get install libqt5serialport5 libqt5serialport5-dev`.
 5. Download &quot;linuxdeployqt-continuous-x86_64.AppImage&quot; from https://github.com/probonopd/linuxdeployqt/releases and place it into %Linuxdeployqt%.
-6. Open QCX_____QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
+6. Open QCX\_QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
 7. Build project as release.
-8. Run following command to build stanlone application: `'%Linuxdeployqt%/linuxdeployqt-continuous-x86_64.AppImage' '%Binary%/QCX_____QT'` -appimage.
+8. Run following command to build stanlone application: `'%Linuxdeployqt%/linuxdeployqt-continuous-x86_64.AppImage' '%Binary%/QCX\_QT'` -appimage.
 9. Remove all *.h, *.cpp, *.o, .DirIcon, AppRun, default.desktop, default.png and Makefile files.
 
 ## Disclaimer
