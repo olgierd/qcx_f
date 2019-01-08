@@ -1,4 +1,4 @@
-# FT8 for QCX Transceiver
+﻿# FT8 for QCX Transceiver
 
 ## Introduction
 
@@ -68,6 +68,67 @@ Few additional libraries are required to run it. On Ubuntu/Debian, run `apt-get 
 ## PC Software - Windows
 
 TODO
+
+## PC Software - Qt
+
+There is GUI-based user friendly software, which uses Qt library. The compilation and running was tested on Windows 8 and Ubuntu Linux 16.04 LTS, authors not guarantees compile posibility on other operating systems.
+
+After first program running you have to set audio device parameters:
+* __Device__ - Phisical or virtual recording audio device.
+* __Sample rate__ - Recording sample rate, the list of available sample rates may vary depending on audio device.
+* __Refresh period__ - Timer interval in milliseconds, its event will occur. The longer refresh period will increase fluenty of audio recording and processing, but can cause timing jitter in controlling transmitter.
+* __Buffer size__ - Audio device buffer size in milliseconds, it is recommended to be between slighty above than refresh period and below a few refresh period times. The value can be limited by audio device.
+* __Audio file__ - File name, where recorded audio will be saved. The purpose of this is to test, if audio is recorded correctly.
+
+Program can send transmitter control data through serial port. You can set the port name and baudrate:
+* __Name__ - Name of serial port like COM1, COM2.
+* __Baud rate__ - Number of bits per second.
+* __Send text__ - Test port transmitting, the text must be received by device connected to the port.
+
+The other serial port parameters are fixed to following:
+* Data bits: 8
+* Stop bits: 1
+* Parity: none
+* Data flow contol: none
+
+In __Info__ box, you can choose from three kinds of messages to display. Error messages will be always displayed.
+
+The __Start__ button starts audio processing and the _Stop_ button stops audio processing. None of settings will affect during audio processing. All parameters will be saved after program exit.
+
+### Build and Run on Windows 8
+
+At this description, there will be used following wilcards:
+
+* __%MinGW%__ - Directory, where MinGW is installed (for example &quot;C:\Qt\Qt5.6\5.6\mingw49_32\&quot;).
+* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX_____QT.exe&quot;).
+
+To compile QCX_____QT for Windows, you have to do following:
+
+1. Install Qt Creator with Qt library and MinGW compiler.
+2. Open QCX_____QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
+3. Build project as release.
+4. Run following command: `%MinGW%\bin\windeployqt.exe --release %Binary%`.
+5. Copy following files from %MinGW%\\bin\\ to %Binary%: libgcc_s_dw2-1.dll, libstdc*6.dll, libwinpthread-1.dll.
+6. Remove all *.cpp and *.o files.
+
+### Build and Run on Ubuntu Linux 16.04 LTS
+
+At this description, there will be used following wilcards:
+
+* __%Linuxdeployqt%__ - Directory, where Linuxdeployqt tool is placed.
+* __%Binary%__ - Directory, where binary is placed after building (contains &quot;QCX_____QT&quot; executable file).
+
+To compile QCX_____QT for Linux equipped with apt-get tool, you have to do following:
+
+1. Upgrade installed packet using following: `sudo apt-get update and sudo apt-get upgrade`.
+2. Install Qt library and Qt Creator using: `sudo apt-get install build-essential qtcreator qt5-default`.
+3. Install multimedia extension for Qt using: `sudo apt-get install libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5`.
+4. install serial port extension for Qt using: `sudo apt-get install libqt5serialport5 libqt5serialport5-dev`.
+5. Download &quot;linuxdeployqt-continuous-x86_64.AppImage&quot; from https://github.com/probonopd/linuxdeployqt/releases and place it into %Linuxdeployqt%.
+6. Open QCX_____QT.pro in Qt Creator, click __Configure Project__ in project configuration screen if appears.
+7. Build project as release.
+8. Run following command to build stanlone application: `'%Linuxdeployqt%/linuxdeployqt-continuous-x86_64.AppImage' '%Binary%/QCX_____QT'` -appimage.
+9. Remove all *.h, *.cpp, *.o, .DirIcon, AppRun, default.desktop, default.png and Makefile files.
 
 ## Disclaimer
 
